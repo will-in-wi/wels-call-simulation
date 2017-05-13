@@ -4,14 +4,14 @@
 MONTH = 30
 
 # Config params
-CALL_ACCEPTANCE_PROBABILITY = 0.2
+CALL_ACCEPTANCE_PROBABILITY = 0.2 # 0.2 would be a 20% chance of accepting the call.
 DAYS_BETWEEN_CALLS_POST_ACCEPTANCE = MONTH*12*4 # 4 years
 DAYS_BETWEEN_CALLS_POST_RETURN = MONTH*6 # Six months
 CALL_DURATION = MONTH
-CALL_DEVIATION = 14
+CALL_DEVIATION = 14 # Plus or minus variation from the CALL_DURATION
 
-NUMBER_OF_PARISHES = 1150
-GAP_PERCENTAGE = 0.07
+NUMBER_OF_PARISHES = 1150 # Stolen from Wikipedia
+GAP_PERCENTAGE = 0.07 # 0.07 would mean 7% fewer pastors than parishes.
 NUMBER_OF_PASTORS = (NUMBER_OF_PARISHES * (1 - GAP_PERCENTAGE)).to_i
 
 require 'colorize'
